@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary2" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_ConvertAmount_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertAmount" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ConvertAmount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCurrencyCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDates" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRates" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetRates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStringForCSV_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringForCSV" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetStringForCSV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringForCSVResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLastDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastDate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLastDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="ConvertAmount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ConvertAmount" message="tns:IService1_ConvertAmount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConvertAmountResponse" message="tns:IService1_ConvertAmount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCurrencyCodes" message="tns:IService1_GetCurrencyCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetCurrencyCodesResponse" message="tns:IService1_GetCurrencyCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDates" message="tns:IService1_GetDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDatesResponse" message="tns:IService1_GetDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRates" message="tns:IService1_GetRates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRatesResponse" message="tns:IService1_GetRates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringForCSV">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetStringForCSV" message="tns:IService1_GetStringForCSV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetStringForCSVResponse" message="tns:IService1_GetStringForCSV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetLastDate" message="tns:IService1_GetLastDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetLastDateResponse" message="tns:IService1_GetLastDate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConvertAmount">
+      <soap:operation soapAction="http://tempuri.org/IService1/ConvertAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyCodes">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetCurrencyCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDates">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRates">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetRates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringForCSV">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetStringForCSV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastDate">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetLastDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfServiceLibrary2/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

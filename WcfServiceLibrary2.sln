@@ -3,10 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceLibrary2", "WcfServiceLibrary2\WcfServiceLibrary2.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "..\WcfServiceLibrary1\WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{FE08834D-C506-4C8A-90BC-636CF3D7C377}"
-	ProjectSection(ProjectDependencies) = postProject
-		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{FE08834D-C506-4C8A-90BC-636CF3D7C377}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

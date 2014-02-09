@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfServiceLibrary2" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfServiceLibrary2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ObjectsList">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Objects" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjectsList" nillable="true" type="tns:ObjectsList" />
+  <xs:complexType name="CurrencyRatesPerDateTypeList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RatesObj" nillable="true" type="tns:ArrayOfCurrencyRatesPerDateType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrencyRatesPerDateTypeList" nillable="true" type="tns:CurrencyRatesPerDateTypeList" />
+  <xs:complexType name="ArrayOfCurrencyRatesPerDateType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CurrencyRatesPerDateType" nillable="true" type="tns:CurrencyRatesPerDateType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCurrencyRatesPerDateType" nillable="true" type="tns:ArrayOfCurrencyRatesPerDateType" />
+  <xs:complexType name="CurrencyRatesPerDateType">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Currencies" nillable="true" type="q2:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CurrencyRatesPerDateType" nillable="true" type="tns:CurrencyRatesPerDateType" />
+</xs:schema>
