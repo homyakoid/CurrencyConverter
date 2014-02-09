@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
     {
         ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
         bool formIsLoaded = false;
-        
+        bool fdk;
         public Form1()
         {
             InitializeComponent();
