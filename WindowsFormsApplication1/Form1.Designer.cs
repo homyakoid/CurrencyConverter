@@ -264,6 +264,9 @@
             this.ClientSize = new System.Drawing.Size(335, 473);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Currency converter";
             this.Load += new System.EventHandler(this.Form1_Load);
